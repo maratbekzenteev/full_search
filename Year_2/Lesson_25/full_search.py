@@ -21,8 +21,8 @@ geocoder_params = {
 response = requests.get(geocoder_api_server, params=geocoder_params)
 
 if not response:
-    # обработка ошибочной ситуации
-    pass
+    print('Ошибка выполнения запроса')
+    sys.exit(0)
 
 # Преобразуем ответ в json-объект
 json_response = response.json()
